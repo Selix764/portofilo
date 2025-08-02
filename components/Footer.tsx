@@ -39,30 +39,34 @@ const Footer = () => {
               <motion.a
                 href="#home"
                 whileHover={{ x: 5 }}
-                className="text-primary-200 hover:text-white transition-all duration-200 cursor-pointer"
+                className="text-primary-200 hover:text-white transition-all duration-200 cursor-pointer relative group"
               >
                 Home
+                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-200 ease-in-out"></div>
               </motion.a>
               <motion.a
                 href="#about"
                 whileHover={{ x: 5 }}
-                className="text-primary-200 hover:text-white transition-all duration-200 cursor-pointer"
+                className="text-primary-200 hover:text-white transition-all duration-200 cursor-pointer relative group"
               >
                 About
+                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-200 ease-in-out"></div>
               </motion.a>
               <motion.a
                 href="#projects"
                 whileHover={{ x: 5 }}
-                className="text-primary-200 hover:text-white transition-all duration-200 cursor-pointer"
+                className="text-primary-200 hover:text-white transition-all duration-200 cursor-pointer relative group"
               >
                 Projects
+                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-200 ease-in-out"></div>
               </motion.a>
               <motion.a
                 href="#contact"
                 whileHover={{ x: 5 }}
-                className="text-primary-200 hover:text-white transition-all duration-200 cursor-pointer"
+                className="text-primary-200 hover:text-white transition-all duration-200 cursor-pointer relative group"
               >
                 Contact
+                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-200 ease-in-out"></div>
               </motion.a>
             </div>
           </motion.div>

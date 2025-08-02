@@ -42,15 +42,22 @@ const About = () => {
             className="space-y-8"
           >
             {/* Profile Image */}
-            <div className="relative">
-              <div className="w-80 h-80 mx-auto rounded-full gradient-border">
+            <motion.div 
+              className="relative"
+              whileHover={{ 
+                scale: 1.08,
+                y: -8
+              }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="w-80 h-80 mx-auto rounded-full gradient-border hover:shadow-xl transition-all duration-300">
                 <div className="w-full h-full rounded-full bg-white p-2">
                   <div className="w-full h-full rounded-full bg-gradient-to-br from-primary-100 via-secondary-100 to-accent-100 flex items-center justify-center">
                     <User className="w-32 h-32 text-primary-600" />
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Personal Info */}
             <div className="space-y-4">
@@ -97,28 +104,16 @@ const About = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   whileHover={{ 
-                    y: -12, 
-                    scale: 1.12, 
-                    rotateY: 5, 
-                    rotateZ: 15,
-                    boxShadow: "0 20px 40px -10px rgba(59, 130, 246, 0.3), 0 0 0 1px rgba(59, 130, 246, 0.1)"
+                    y: -8, 
+                    scale: 1.08
                   }}
                   transition={{ 
-                    duration: 0.4, 
-                    delay: index * 0.1,
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 20
+                    duration: 0.3, 
+                    delay: index * 0.1
                   }}
                   viewport={{ once: true }}
-                  className="text-center p-4 bg-gradient-to-br from-white/90 via-primary-50/50 to-secondary-50/30 rounded-2xl border border-primary-100/60 hover:border-primary-300/80 transition-all duration-500 cursor-pointer transform-gpu relative overflow-hidden group backdrop-blur-sm"
+                  className="text-center p-4 bg-gradient-to-br from-white/90 via-primary-50/50 to-secondary-50/30 rounded-2xl border border-primary-100/60 hover:border-primary-300/80 transition-all duration-300 cursor-pointer transform-gpu relative overflow-hidden group backdrop-blur-sm hover:shadow-xl"
                 >
-                  {/* Glow Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-400/0 via-primary-400/10 to-secondary-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                  
-                  {/* Animated Border */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary-400/30 via-secondary-400/30 to-accent-400/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
-                  
                   <div className="relative z-10">
                     <motion.div 
                       className="text-3xl font-bold text-primary-600 mb-1 group-hover:text-primary-700 transition-colors duration-300"

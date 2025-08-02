@@ -45,25 +45,15 @@ const Contact = () => {
             {/* Contact Cards */}
             <div className="space-y-6">
               <motion.div 
-                className="flex items-center gap-4 p-4 bg-gradient-to-r from-white/90 via-primary-50/50 to-secondary-50/30 rounded-2xl border border-primary-100/60 hover:border-primary-300/80 transition-all duration-500 transform-gpu relative overflow-hidden group backdrop-blur-sm"
+                className="flex items-center gap-4 p-4 bg-gradient-to-r from-white/90 via-primary-50/50 to-secondary-50/30 rounded-2xl border border-primary-100/60 hover:border-primary-300/80 transition-all duration-300 transform-gpu relative overflow-hidden group backdrop-blur-sm hover:shadow-xl"
                 whileHover={{ 
-                  scale: 1.08, 
-                  y: -12, 
-                  rotateY: 5, 
-                  rotateZ: 15, 
-                  x: 8,
-                  boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.25), 0 0 0 1px rgba(59, 130, 246, 0.1)"
+                  y: -8, 
+                  scale: 1.08
                 }}
                 transition={{ 
-                  duration: 0.4,
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 20
+                  duration: 0.3
                 }}
               >
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-400/0 via-primary-400/10 to-secondary-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                
                 <div className="relative z-10 flex items-center gap-4">
                   <motion.div 
                     className="p-3 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full"
@@ -80,25 +70,15 @@ const Contact = () => {
               </motion.div>
 
               <motion.div 
-                className="flex items-center gap-4 p-4 bg-gradient-to-r from-white/90 via-secondary-50/50 to-accent-50/30 rounded-2xl border border-secondary-100/60 hover:border-secondary-300/80 transition-all duration-500 transform-gpu relative overflow-hidden group backdrop-blur-sm"
+                className="flex items-center gap-4 p-4 bg-gradient-to-r from-white/90 via-secondary-50/50 to-accent-50/30 rounded-2xl border border-secondary-100/60 hover:border-secondary-300/80 transition-all duration-300 transform-gpu relative overflow-hidden group backdrop-blur-sm hover:shadow-xl"
                 whileHover={{ 
-                  scale: 1.08, 
-                  y: -12, 
-                  rotateY: 5, 
-                  rotateZ: 15, 
-                  x: 8,
-                  boxShadow: "0 25px 50px -12px rgba(168, 85, 247, 0.25), 0 0 0 1px rgba(168, 85, 247, 0.1)"
+                  y: -8, 
+                  scale: 1.08
                 }}
                 transition={{ 
-                  duration: 0.4,
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 20
+                  duration: 0.3
                 }}
               >
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-secondary-400/0 via-secondary-400/10 to-accent-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                
                 <div className="relative z-10 flex items-center gap-4">
                   <motion.div 
                     className="p-3 bg-gradient-to-br from-secondary-100 to-accent-100 rounded-full"
@@ -115,25 +95,15 @@ const Contact = () => {
               </motion.div>
 
               <motion.div 
-                className="flex items-center gap-4 p-4 bg-gradient-to-r from-white/90 via-accent-50/50 to-primary-50/30 rounded-2xl border border-accent-100/60 hover:border-accent-300/80 transition-all duration-500 transform-gpu relative overflow-hidden group backdrop-blur-sm"
+                className="flex items-center gap-4 p-4 bg-gradient-to-r from-white/90 via-accent-50/50 to-primary-50/30 rounded-2xl border border-accent-100/60 hover:border-accent-300/80 transition-all duration-300 transform-gpu relative overflow-hidden group backdrop-blur-sm hover:shadow-xl"
                 whileHover={{ 
-                  scale: 1.08, 
-                  y: -12, 
-                  rotateY: 5, 
-                  rotateZ: 15, 
-                  x: 8,
-                  boxShadow: "0 25px 50px -12px rgba(236, 72, 153, 0.25), 0 0 0 1px rgba(236, 72, 153, 0.1)"
+                  y: -8, 
+                  scale: 1.08
                 }}
                 transition={{ 
-                  duration: 0.4,
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 20
+                  duration: 0.3
                 }}
               >
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-accent-400/0 via-accent-400/10 to-primary-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                
                 <div className="relative z-10 flex items-center gap-4">
                   <motion.div 
                     className="p-3 bg-gradient-to-br from-accent-100 to-primary-100 rounded-full"
@@ -206,23 +176,15 @@ const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-white/90 via-primary-50/50 to-secondary-50/30 rounded-2xl p-8 border border-primary-200/60 transition-all duration-500 transform-gpu relative overflow-hidden group backdrop-blur-sm"
+            className="bg-gradient-to-br from-white/90 via-primary-50/50 to-secondary-50/30 rounded-2xl p-8 border border-primary-200/60 transition-all duration-300 transform-gpu relative overflow-hidden group backdrop-blur-sm hover:shadow-xl"
             whileHover={{ 
-              scale: 1.05, 
               y: -8, 
-              rotateY: 3, 
-              rotateZ: 12,
-              boxShadow: "0 30px 60px -15px rgba(59, 130, 246, 0.3), 0 0 0 1px rgba(59, 130, 246, 0.1)"
+              scale: 1.08
             }}
             transition={{ 
-              duration: 0.4,
-              type: "spring",
-              stiffness: 300,
-              damping: 20
+              duration: 0.3
             }}
           >
-            {/* Glow Effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-400/0 via-primary-400/15 to-secondary-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
             
             <div className="relative z-10 text-center space-y-6">
               <motion.div 
@@ -234,12 +196,11 @@ const Contact = () => {
               </motion.div>
               
               <h3 className="text-2xl font-bold text-primary-800 group-hover:text-primary-900 transition-colors duration-300">
-                Ready to Start Your Project?
+                {t('contact.readyToStart')}
               </h3>
               
               <p className="text-primary-600 leading-relaxed group-hover:text-primary-700 transition-colors duration-300">
-                I'm excited to hear about your ideas and help bring them to life. 
-                Let's create something amazing together!
+                {t('contact.readyToStartDescription')}
               </p>
               
               <div className="space-y-4">
@@ -259,26 +220,7 @@ const Contact = () => {
                   href="mailto:iordachepaul764@gmail.com"
                   className="block w-full bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-3 px-6 rounded-lg font-medium hover:from-primary-700 hover:to-secondary-700 transition-all duration-300 glow"
                 >
-                  Send Me an Email
-                </motion.a>
-                
-                <motion.a
-                  whileHover={{ 
-                    scale: 1.08, 
-                    rotateZ: 12,
-                    boxShadow: "0 15px 30px -5px rgba(236, 72, 153, 0.4)"
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ 
-                    duration: 0.3,
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 15
-                  }}
-                  href="tel:+40745032132"
-                  className="block w-full border-2 border-accent-500 text-accent-600 py-3 px-6 rounded-lg font-medium hover:bg-accent-500 hover:text-white transition-all duration-300"
-                >
-                  Call Me Directly
+                  {t('contact.sendEmail')}
                 </motion.a>
               </div>
             </div>

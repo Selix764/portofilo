@@ -64,29 +64,17 @@ const Skills = () => {
               key={category.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ 
-                y: -15, 
-                scale: 1.08, 
-                rotateY: 8, 
-                rotateZ: 12,
-                boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(59, 130, 246, 0.1)"
+                            whileHover={{ 
+                y: -10, 
+                scale: 1.1
               }}
               transition={{ 
-                duration: 0.4, 
-                delay: index * 0.1,
-                type: "spring",
-                stiffness: 300,
-                damping: 20
+                duration: 0.3, 
+                delay: index * 0.1
               }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/20 rounded-2xl p-6 border border-primary-100/50 hover:border-primary-300/80 transition-all duration-500 transform-gpu relative overflow-hidden group"
+              className="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/20 rounded-2xl p-6 border border-primary-100/50 hover:border-primary-300/80 transition-all duration-300 transform-gpu relative overflow-hidden group hover:shadow-xl"
             >
-              {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-400/0 via-primary-400/5 to-secondary-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-              
-              {/* Animated Border */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary-400/20 via-secondary-400/20 to-accent-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
-              
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div 
@@ -106,16 +94,14 @@ const Skills = () => {
                     <motion.span
                       key={skill}
                       whileHover={{ 
-                        scale: 1.1, 
-                        y: -3, 
-                        rotateZ: 8,
-                        boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.3)"
+                        scale: 1.15, 
+                        y: -4
                       }}
                       transition={{ 
                         duration: 0.3,
                         delay: skillIndex * 0.05
                       }}
-                      className="px-3 py-1 bg-gradient-to-r from-primary-50/80 to-secondary-50/80 text-primary-700 text-sm font-medium rounded-full border border-primary-200/60 hover:border-primary-400/80 transition-all duration-300 cursor-pointer backdrop-blur-sm"
+                      className="px-3 py-1 bg-gradient-to-r from-primary-50/80 to-secondary-50/80 text-primary-700 text-sm font-medium rounded-full border border-primary-200/60 hover:border-primary-400/80 transition-all duration-300 cursor-pointer backdrop-blur-sm hover:shadow-lg"
                     >
                       {skill}
                     </motion.span>

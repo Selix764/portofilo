@@ -13,13 +13,13 @@ export const translations = {
     },
 
     // Hero Section
-               hero: {
-             title: 'Paul-Alexandru',
-             subtitle: 'Dezvoltator Freelance',
-             description: 'Dezvoltator român de 16 ani care construiește soluții web moderne. Specializat în Next.js, React și integrarea API-urilor. Disponibil pentru proiecte freelance €300-€500.',
-             learnMore: 'Află Mai Multe',
-             scrollDown: 'Derulează în jos'
-           },
+    hero: {
+      title: 'Construiesc',
+      subtitle: 'Vise',
+      description: 'Dezvoltator web pasionat care transformă ideile în realitate digitală. Specializat în aplicații moderne, design intuitiv și soluții scalabile.',
+      learnMore: 'Descoperă Portofoliul',
+      scrollDown: 'Derulează în jos'
+    },
 
     // About Section
     about: {
@@ -81,28 +81,32 @@ export const translations = {
       viewFirstProject: 'Vezi primul meu proiect'
     },
 
-               // Contact Section
-           contact: {
-             title: 'Ia Legătura',
-             subtitle: 'Sunt întotdeauna deschis la discuții despre noi oportunități și proiecte interesante',
-             description: 'Sunt în prezent disponibil pentru proiecte freelance și gata să te ajut să dai viață ideilor tale. Fie că ai nevoie de un website, integrare API sau ai întrebări despre proiectul tău, voi răspunde în 24 de ore cu o propunere detaliată.',
-             letsConnect: 'Să Ne Conectăm',
-             followMe: 'Urmărește-mă',
-             phone: '+40 745 032 132',
-             form: {
-               name: 'Nume',
-               email: 'Email',
-               subject: 'Subiect',
-               message: 'Mesaj',
-               namePlaceholder: 'Numele tău',
-               emailPlaceholder: 'emailul.tau@exemplu.com',
-               subjectPlaceholder: 'Despre ce este vorba?',
-               messagePlaceholder: 'Spune-mi despre proiectul tău...',
-               send: 'Trimite Mesajul',
-               sending: 'Se trimite...',
-               success: 'Mulțumesc pentru mesaj! Voi răspunde în curând.'
-             }
-           },
+                   // Contact Section
+    contact: {
+      title: 'Ia Legătura',
+      subtitle: 'Sunt întotdeauna deschis la discuții despre noi oportunități și proiecte interesante',
+      description: 'Sunt în prezent disponibil pentru proiecte freelance și gata să te ajut să dai viață ideilor tale. Fie că ai nevoie de un website, integrare API sau ai întrebări despre proiectul tău, voi răspunde în 24 de ore cu o propunere detaliată.',
+      letsConnect: 'Să Ne Conectăm',
+      followMe: 'Urmărește-mă',
+      phone: '+40 745 032 132',
+      readyToStart: 'Gata să Începi Proiectul Tău?',
+      readyToStartDescription: 'Sunt entuziasmat să aud despre ideile tale și să te ajut să le dai viață. Să creăm ceva minunat împreună!',
+      sendEmail: 'Trimite-mi un Email',
+      callDirectly: 'Sună-mă Direct',
+      form: {
+        name: 'Nume',
+        email: 'Email',
+        subject: 'Subiect',
+        message: 'Mesaj',
+        namePlaceholder: 'Numele tău',
+        emailPlaceholder: 'emailul.tau@exemplu.com',
+        subjectPlaceholder: 'Despre ce este vorba?',
+        messagePlaceholder: 'Spune-mi despre proiectul tău...',
+        send: 'Trimite Mesajul',
+        sending: 'Se trimite...',
+        success: 'Mulțumesc pentru mesaj! Voi răspunde în curând.'
+      }
+    },
 
     // Footer
     footer: {
@@ -134,13 +138,13 @@ export const translations = {
     },
 
     // Hero Section
-               hero: {
-             title: 'Paul-Alexandru',
-             subtitle: 'Freelance Developer',
-             description: '16-year-old Romanian developer building modern web solutions. Specializing in Next.js, React, and API integrations. Available for freelance projects €300-€500.',
-             learnMore: 'Learn More',
-             scrollDown: 'Scroll Down'
-           },
+    hero: {
+      title: 'Building',
+      subtitle: 'Dreams',
+      description: 'Passionate web developer turning ideas into digital reality. Specializing in modern applications, intuitive design, and scalable solutions.',
+      learnMore: 'Explore Portfolio',
+      scrollDown: 'Scroll Down'
+    },
 
     // About Section
     about: {
@@ -210,6 +214,10 @@ export const translations = {
       letsConnect: 'Let\'s Connect',
       followMe: 'Follow Me',
       phone: '+40 745 032 132',
+      readyToStart: 'Ready to Start Your Project?',
+      readyToStartDescription: 'I\'m excited to hear about your ideas and help bring them to life. Let\'s create something amazing together!',
+      sendEmail: 'Send Me an Email',
+      callDirectly: 'Call Me Directly',
       form: {
         name: 'Name',
         email: 'Email',

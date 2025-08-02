@@ -80,9 +80,13 @@ const Projects = () => {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ 
+                  scale: 1.03,
+                  y: -6
+                }}
                 whileTap={{ scale: 0.98 }}
-                className="block relative w-full aspect-[16/10] bg-gradient-to-br from-primary-100 to-secondary-100 rounded-lg overflow-hidden border border-primary-200 mb-6 cursor-pointer transition-all duration-200 hover:shadow-lg hover:border-primary-300"
+                transition={{ duration: 0.3 }}
+                className="block relative w-full aspect-[16/10] bg-gradient-to-br from-primary-100 to-secondary-100 rounded-lg overflow-hidden border border-primary-200 mb-6 cursor-pointer transition-all duration-300 hover:shadow-xl hover:border-primary-300"
               >
                 <img 
                   src={project.image} 
@@ -100,26 +104,15 @@ const Projects = () => {
 
               {/* Project Info Card */}
               <motion.div 
-                className="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/20 rounded-2xl p-6 shadow-lg border border-primary-100/60 max-w-xl mx-auto hover:border-primary-300/80 transition-all duration-500 transform-gpu relative overflow-hidden group backdrop-blur-sm"
+                className="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/20 rounded-2xl p-6 shadow-lg border border-primary-100/60 max-w-xl mx-auto hover:border-primary-300/80 transition-all duration-300 transform-gpu relative overflow-hidden group backdrop-blur-sm hover:shadow-xl"
                 whileHover={{ 
                   y: -12, 
-                  scale: 1.05, 
-                  rotateY: 5, 
-                  rotateZ: 15,
-                  boxShadow: "0 30px 60px -15px rgba(59, 130, 246, 0.25), 0 0 0 1px rgba(59, 130, 246, 0.1)"
+                  scale: 1.05
                 }}
                 transition={{ 
-                  duration: 0.4,
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 20
+                  duration: 0.3
                 }}
               >
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-400/0 via-primary-400/10 to-secondary-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                
-                {/* Animated Border */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary-400/20 via-secondary-400/20 to-accent-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
                 
                 <div className="relative z-10">
                   <h3 className="text-xl font-bold text-primary-800 mb-4 group-hover:text-primary-900 transition-colors duration-300">
@@ -136,10 +129,8 @@ const Projects = () => {
                       <motion.span
                         key={tech}
                         whileHover={{ 
-                          scale: 1.1, 
-                          y: -2, 
-                          rotateZ: 8,
-                          boxShadow: "0 8px 20px -5px rgba(59, 130, 246, 0.3)"
+                          scale: 1.12, 
+                          y: -3
                         }}
                         transition={{ 
                           duration: 0.3,

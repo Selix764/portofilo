@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Mail, Instagram } from 'lucide-react'
+import { ArrowDown, Github, Mail, Instagram, Sparkles } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const Hero = () => {
@@ -87,55 +87,107 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent"></div>
       
       <div className="container-custom relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
-          {/* Main Heading */}
-          <motion.h1
+        <div className="text-center max-w-5xl mx-auto">
+          {/* Main Heading with Enhanced Typography */}
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold mb-6"
+            className="mb-6"
           >
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              {t('hero.title')}
-            </span>
-            <br />
-            <span className="text-gray-800">{t('hero.subtitle')}</span>
-          </motion.h1>
+            <motion.h1
+              className="text-6xl md:text-8xl font-black mb-4 tracking-tight"
+            >
+              <motion.span
+                className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent"
+                whileHover={{ 
+                  scale: 1.02,
+                  filter: "brightness(1.1)",
+                  transition: { duration: 0.3 }
+                }}
+              >
+                {t('hero.title')}
+              </motion.span>
+            </motion.h1>
+            
+            <motion.h2
+              className="text-4xl md:text-6xl font-bold text-gray-800 mb-6"
+              whileHover={{ 
+                scale: 1.01,
+                transition: { duration: 0.3 }
+              }}
+            >
+              {t('hero.subtitle')}
+            </motion.h2>
+          </motion.div>
 
-          {/* Subtitle */}
-          <motion.p
+          {/* Enhanced Subtitle with Sparkle Icon */}
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed"
+            className="mb-10"
           >
-            {t('hero.description')}
-          </motion.p>
+            <motion.div
+              className="flex items-center justify-center gap-3 mb-4"
+              whileHover={{ scale: 1.05 }}
+            >
+              <motion.div
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+              >
+                <Sparkles className="w-6 h-6 text-purple-500" />
+              </motion.div>
+              <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-medium">
+                {t('hero.description')}
+              </p>
+              <motion.div
+                animate={{ rotate: [0, -360] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+              >
+                <Sparkles className="w-6 h-6 text-blue-500" />
+              </motion.div>
+            </motion.div>
+          </motion.div>
 
-          {/* CTA Buttons */}
+          {/* Enhanced CTA Button with New Animation */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+            className="mb-12 flex justify-center"
           >
             <motion.button
-              whileHover={{ scale: 1.05, y: -3 }}
+              whileHover={{ 
+                scale: 1.05, 
+                y: -5,
+                boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)"
+              }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToAbout}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl"
+              className="group relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 flex items-center gap-3 shadow-xl hover:shadow-2xl overflow-hidden"
             >
-              {t('hero.learnMore')}
+              {/* Animated background overlay */}
               <motion.div
-                animate={{ y: [0, 3, 0] }}
+                className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: "0%" }}
+                transition={{ duration: 0.3 }}
+              />
+              
+              <span className="relative z-10">{t('hero.learnMore')}</span>
+              
+              <motion.div
+                className="relative z-10"
+                animate={{ y: [0, 5, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                <ArrowDown className="w-5 h-5" />
+                <ArrowDown className="w-6 h-6" />
               </motion.div>
             </motion.button>
           </motion.div>
 
-          {/* Social Links */}
+          {/* Enhanced Social Links with New Hover Effects */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -143,40 +195,67 @@ const Hero = () => {
             className="flex justify-center items-center gap-6"
           >
             <motion.a
-              whileHover={{ scale: 1.1, y: -2 }}
+              whileHover={{ 
+                scale: 1.15, 
+                y: -8
+              }}
               whileTap={{ scale: 0.95 }}
               href="https://github.com/Selix764"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:bg-white border border-gray-200/50"
+              className="group p-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:bg-white border border-gray-200/50 relative overflow-hidden"
             >
-              <Github className="w-6 h-6 text-gray-700" />
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: "0%" }}
+                transition={{ duration: 0.3 }}
+              />
+              <Github className="w-7 h-7 text-gray-700 relative z-10" />
             </motion.a>
             
             <motion.a
-              whileHover={{ scale: 1.1, y: -2 }}
+              whileHover={{ 
+                scale: 1.15, 
+                y: -8
+              }}
               whileTap={{ scale: 0.95 }}
               href="https://www.instagram.com/building.dreams.dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:bg-white border border-gray-200/50"
+              className="group p-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:bg-white border border-gray-200/50 relative overflow-hidden"
             >
-              <Instagram className="w-6 h-6 text-gray-700" />
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-pink-100 to-purple-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: "0%" }}
+                transition={{ duration: 0.3 }}
+              />
+              <Instagram className="w-7 h-7 text-gray-700 relative z-10" />
             </motion.a>
             
             <motion.a
-              whileHover={{ scale: 1.1, y: -2 }}
+              whileHover={{ 
+                scale: 1.15, 
+                y: -8
+              }}
               whileTap={{ scale: 0.95 }}
               href="mailto:iordachepaul764@gmail.com"
-              className="p-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:bg-white border border-gray-200/50"
+              className="group p-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:bg-white border border-gray-200/50 relative overflow-hidden"
             >
-              <Mail className="w-6 h-6 text-gray-700" />
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-blue-100 to-cyan-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: "0%" }}
+                transition={{ duration: 0.3 }}
+              />
+              <Mail className="w-7 h-7 text-gray-700 relative z-10" />
             </motion.a>
           </motion.div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Enhanced Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -185,10 +264,19 @@ const Hero = () => {
       >
         <motion.button
           onClick={scrollToAbout}
-          className="text-gray-600 hover:text-gray-800 transition-colors p-2 rounded-full hover:bg-white/50 backdrop-blur-sm"
-          whileHover={{ y: 5 }}
+          className="group text-gray-600 hover:text-gray-800 transition-colors p-3 rounded-full hover:bg-white/70 backdrop-blur-sm border border-gray-200/50"
+          whileHover={{ 
+            y: 8,
+            scale: 1.1,
+            boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)"
+          }}
         >
-          <ArrowDown className="w-6 h-6" />
+          <motion.div
+            animate={{ y: [0, 5, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <ArrowDown className="w-6 h-6" />
+          </motion.div>
         </motion.button>
       </motion.div>
     </section>

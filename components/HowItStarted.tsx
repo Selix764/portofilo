@@ -43,13 +43,20 @@ const HowItStarted = () => {
             className="grid lg:grid-cols-2 gap-12 items-start"
           >
             {/* Project Screenshot - Large 16:10 Image */}
-            <div className="relative w-full aspect-[16/10] bg-gradient-to-br from-primary-100 to-secondary-100 rounded-lg overflow-hidden border border-primary-200">
+            <motion.div 
+              className="relative w-full aspect-[16/10] bg-gradient-to-br from-primary-100 to-secondary-100 rounded-lg overflow-hidden border border-primary-200 hover:shadow-xl transition-all duration-300"
+              whileHover={{ 
+                scale: 1.05,
+                y: -6
+              }}
+              transition={{ duration: 0.3 }}
+            >
               <img 
                 src="/projects/mron-launcher.png" 
                 alt="MRON-Launcher"
                 className="w-full h-full object-cover"
               />
-            </div>
+            </motion.div>
 
             {/* Project Story */}
             <div className="space-y-6">
@@ -90,23 +97,15 @@ const HowItStarted = () => {
                   <motion.span
                     key={tech}
                     whileHover={{ 
-                      scale: 1.15, 
-                      y: -5, 
-                      rotateY: 8, 
-                      rotateZ: 15,
-                      boxShadow: "0 15px 30px -5px rgba(236, 72, 153, 0.4)"
+                      scale: 1.12, 
+                      y: -4
                     }}
                     transition={{ 
-                      duration: 0.4,
-                      type: "spring",
-                      stiffness: 400,
-                      damping: 15,
+                      duration: 0.3,
                       delay: index * 0.1
                     }}
-                    className="px-4 py-2 bg-gradient-to-r from-accent-50/80 via-primary-50/60 to-secondary-50/40 text-primary-700 text-sm font-medium rounded-full border border-accent-200/60 hover:border-accent-400/80 transition-all duration-300 cursor-pointer transform-gpu backdrop-blur-sm relative overflow-hidden group"
+                    className="px-4 py-2 bg-gradient-to-r from-accent-50/80 via-primary-50/60 to-secondary-50/40 text-primary-700 text-sm font-medium rounded-full border border-accent-200/60 hover:border-accent-400/80 transition-all duration-300 cursor-pointer transform-gpu backdrop-blur-sm relative overflow-hidden group hover:shadow-lg"
                   >
-                    {/* Glow Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-accent-400/0 via-accent-400/20 to-primary-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
                     <span className="relative z-10">{tech}</span>
                   </motion.span>
                 ))}

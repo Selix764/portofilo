@@ -50,11 +50,16 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold gradient-text cursor-pointer"
+            whileHover={{ 
+              scale: 1.1,
+              rotate: [0, 5, -5, 0],
+              filter: "brightness(1.1)"
+            }}
+            whileTap={{ scale: 0.95 }}
+            className="text-2xl font-bold gradient-text cursor-pointer px-4 py-2 rounded-lg hover:bg-white/30 backdrop-blur-sm transition-all duration-300"
             onClick={() => scrollToSection('#home')}
           >
-            Paul-Alexandru
+            Portfolio
           </motion.div>
 
           {/* Desktop Navigation - Centered */}
@@ -62,17 +67,17 @@ const Header = () => {
             {navItems.map((item) => (
               <motion.button
                 key={item.name}
-                whileHover={{ scale: 1.05, y: -2 }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -2
+                }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.href)}
-                className="text-primary-600 hover:text-primary-800 font-medium transition-all duration-200 relative group"
+                className="text-primary-600 hover:text-primary-800 font-semibold transition-all duration-300 relative group px-3 py-2 rounded-lg hover:bg-white/50 backdrop-blur-sm"
               >
                 {item.name}
-                <motion.div
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-secondary-600 group-hover:w-full transition-all duration-300"
-                  initial={{ width: 0 }}
-                  whileHover={{ width: '100%' }}
-                />
+                {/* Animated underline effect */}
+                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 group-hover:w-full transition-all duration-200 ease-in-out"></div>
               </motion.button>
             ))}
           </nav>
