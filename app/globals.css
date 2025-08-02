@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #ffffff;
+    color: #1e293b;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    background: linear-gradient(135deg, #3b82f6 0%, #d946ef 50%, #eab308 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, #eff6ff 0%, #fdf4ff 50%, #fefce8 100%);
+  }
+  
+  .gradient-border {
+    background: linear-gradient(135deg, #3b82f6, #d946ef, #eab308);
+    padding: 1px;
+    border-radius: 0.75rem;
+  }
+  
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.15), 0 10px 10px -5px rgba(217, 70, 239, 0.1);
+  }
+  
+  .section-padding {
+    padding: 5rem 0;
+  }
+  
+  .container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .glow {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  
+  .glow:hover {
+    box-shadow: 0 0 30px rgba(217, 70, 239, 0.4);
+  }
+} 
