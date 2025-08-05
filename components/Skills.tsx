@@ -41,7 +41,7 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skills" className="section-padding bg-white">
+    <section id="skills" className="section-padding">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -50,10 +50,10 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-800 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-800 mb-6">
             {t('skills.title')}
           </h2>
-          <p className="text-xl text-primary-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-primary-600 max-w-3xl mx-auto leading-relaxed">
             {t('skills.subtitle')}
           </p>
         </motion.div>
@@ -64,22 +64,26 @@ const Skills = () => {
               key={category.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-                            whileHover={{ 
-                y: -10, 
-                scale: 1.1
+              whileHover={{ 
+                y: -8, 
+                scale: 1.05
               }}
               transition={{ 
                 duration: 0.3, 
                 delay: index * 0.1
               }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/20 rounded-2xl p-6 border border-primary-100/50 hover:border-primary-300/80 transition-all duration-300 transform-gpu relative overflow-hidden group hover:shadow-xl"
+              className="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/20 rounded-2xl p-6 border border-primary-100/50 hover:border-primary-300/80 transition-all duration-300 transform-gpu relative overflow-hidden group hover:shadow-xl card-hover"
             >
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div 
                     className="text-primary-600"
-                    whileHover={{ rotate: 360, scale: 1.2 }}
+                    whileHover={{ 
+                      rotate: 360, 
+                      scale: 1.05,
+                      boxShadow: "0 15px 30px -5px rgba(59, 130, 246, 0.3)"
+                    }}
                     transition={{ duration: 0.6 }}
                   >
                     {category.icon}
@@ -94,8 +98,9 @@ const Skills = () => {
                     <motion.span
                       key={skill}
                       whileHover={{ 
-                        scale: 1.15, 
-                        y: -4
+                        scale: 1.05, 
+                        y: -3,
+                        boxShadow: "0 15px 30px -5px rgba(59, 130, 246, 0.3)"
                       }}
                       transition={{ 
                         duration: 0.3,
