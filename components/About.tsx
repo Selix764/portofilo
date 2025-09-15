@@ -24,7 +24,7 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-800 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-wood-900 mb-4">
             {t('about.title')}
           </h2>
           <p className="text-lg md:text-xl text-primary-600 max-w-3xl mx-auto leading-relaxed">
@@ -140,54 +140,36 @@ const About = () => {
 
             {/* Enhanced Stats */}
             <div className="grid grid-cols-2 gap-6 pt-6">
-              {stats.map((stat, index) => {
-                const IconComponent = stat.icon
-                return (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    whileHover={{ 
-                      y: -8, 
-                      scale: 1.05
-                    }}
-                    transition={{ 
-                      duration: 0.3, 
-                      delay: index * 0.1
-                    }}
-                    viewport={{ once: true }}
-                    className="text-center p-6 bg-gradient-to-br from-white/90 via-primary-50/50 to-secondary-50/30 rounded-2xl border border-primary-100/60 hover:border-primary-300/80 transition-all duration-300 cursor-pointer transform-gpu relative overflow-hidden group backdrop-blur-sm hover:shadow-xl card-hover"
-                  >
-                    <div className="relative z-10">
-                      <motion.div 
-                        className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full mb-4 mx-auto"
-                        whileHover={{ 
-                          rotate: 360, 
-                          scale: 1.05,
-                          boxShadow: "0 15px 30px -5px rgba(59, 130, 246, 0.3)"
-                        }}
-                        transition={{ duration: 0.6 }}
-                      >
-                        <IconComponent className="w-6 h-6 text-primary-600" />
-                      </motion.div>
-                      
-                      <motion.div 
-                        className="text-3xl font-bold text-primary-600 mb-2 group-hover:text-primary-700 transition-colors duration-300"
-                        whileHover={{ 
-                          scale: 1.05,
-                          boxShadow: "0 15px 30px -5px rgba(59, 130, 246, 0.3)"
-                        }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        {stat.value}
-                      </motion.div>
-                      <div className="text-sm font-medium text-primary-500 group-hover:text-primary-600 transition-colors duration-300">
-                        {stat.label}
-                      </div>
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ 
+                    y: -8, 
+                    scale: 1.08
+                  }}
+                  transition={{ 
+                    duration: 0.3, 
+                    delay: index * 0.1
+                  }}
+                  viewport={{ once: true }}
+                  className="text-center p-4 bg-gradient-to-br from-white/90 via-primary-50/50 to-secondary-50/30 rounded-2xl border border-wood-200 hover:border-wood-400 transition-all duration-300 cursor-pointer transform-gpu relative overflow-hidden group backdrop-blur-sm hover:shadow-xl"
+                >
+                  <div className="relative z-10">
+                    <motion.div 
+                      className="text-3xl font-bold text-primary-600 mb-1 group-hover:text-primary-700 transition-colors duration-300"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {stat.value}
+                    </motion.div>
+                    <div className="text-sm text-primary-500 group-hover:text-primary-600 transition-colors duration-300">
+                      {stat.label}
                     </div>
-                  </motion.div>
-                )
-              })}
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>

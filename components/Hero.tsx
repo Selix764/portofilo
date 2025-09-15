@@ -22,22 +22,22 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Enhanced Background Design */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100"></div>
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-24 scroll-mt-24">
+      {/* Modern Background Design */}
+      <div className="absolute inset-0 bg-gradient-to-br from-base-50 via-base-100 to-base-200"></div>
       
       {/* Enhanced Geometric Pattern Overlay */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full">
           {/* Grid Pattern */}
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.15) 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0, 155, 142, 0.12) 1px, transparent 0)`,
             backgroundSize: '40px 40px'
           }}></div>
           
           {/* Diagonal Lines */}
           <div className="absolute inset-0" style={{
-            backgroundImage: `linear-gradient(45deg, transparent 40%, rgba(59, 130, 246, 0.1) 50%, transparent 60%)`,
+            backgroundImage: `linear-gradient(45deg, transparent 40%, rgba(41, 171, 135, 0.1) 50%, transparent 60%)`,
             backgroundSize: '100px 100px'
           }}></div>
         </div>
@@ -56,7 +56,7 @@ const Hero = () => {
             repeat: Infinity, 
             ease: "easeInOut" 
           }}
-          className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl"
+          className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-primary-400/20 to-secondary-400/20 rounded-full blur-3xl"
         ></motion.div>
         
         {/* Medium Circle */}
@@ -71,7 +71,7 @@ const Hero = () => {
             ease: "easeInOut",
             delay: 2
           }}
-          className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-to-br from-indigo-400/20 to-pink-400/20 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-to-br from-secondary-400/20 to-accent-400/20 rounded-full blur-3xl"
         ></motion.div>
         
         {/* Small Circle */}
@@ -86,7 +86,7 @@ const Hero = () => {
             ease: "easeInOut",
             delay: 1
           }}
-          className="absolute top-1/2 left-1/3 w-32 h-32 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 rounded-full blur-2xl"
+          className="absolute top-1/2 left-1/3 w-32 h-32 bg-gradient-to-br from-accent-400/20 to-primary-400/20 rounded-full blur-2xl"
         ></motion.div>
 
         {/* Floating Stars */}
@@ -123,7 +123,7 @@ const Hero = () => {
       </div>
 
       {/* Gradient Overlay for Depth */}
-      <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-base-100/80 via-transparent to-transparent"></div>
       
       <div className="container-custom relative z-10">
         <div className="text-center max-w-6xl mx-auto">
@@ -138,7 +138,7 @@ const Hero = () => {
               className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight"
             >
               <motion.span
-                className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-600 bg-clip-text text-transparent"
                 whileHover={{ 
                   scale: 1.02,
                   filter: "brightness(1.1)",
@@ -150,7 +150,7 @@ const Hero = () => {
             </motion.h1>
             
             <motion.h2
-              className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-8"
+              className="text-4xl md:text-6xl font-bold text-wood-900 mb-6"
               whileHover={{ 
                 scale: 1.01,
                 transition: { duration: 0.3 }
@@ -175,7 +175,7 @@ const Hero = () => {
                 animate={{ rotate: [0, 360] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               >
-                <Sparkles className="w-8 h-8 text-purple-500" />
+                <Sparkles className="w-6 h-6 text-secondary-500" />
               </motion.div>
               <p className="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-medium">
                 {t('hero.description')}
@@ -184,7 +184,7 @@ const Hero = () => {
                 animate={{ rotate: [0, -360] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               >
-                <Sparkles className="w-8 h-8 text-blue-500" />
+                <Sparkles className="w-6 h-6 text-accent-500" />
               </motion.div>
             </motion.div>
           </motion.div>
@@ -204,8 +204,8 @@ const Hero = () => {
                 boxShadow: "0 15px 30px -5px rgba(59, 130, 246, 0.4)"
               }}
               whileTap={{ scale: 0.95 }}
-              onClick={handleContactClick}
-              className="group relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all duration-300 flex items-center gap-4 shadow-2xl hover:shadow-3xl overflow-hidden tap-target"
+              onClick={scrollToAbout}
+              className="group relative bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-10 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 flex items-center gap-3 shadow-xl hover:shadow-2xl overflow-hidden"
             >
               {/* Animated background overlay */}
               <motion.div

@@ -25,7 +25,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-800 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-wood-900 mb-4">
             {t('contact.title')}
           </h2>
           <p className="text-lg md:text-xl text-primary-600 max-w-3xl mx-auto leading-relaxed">
@@ -184,7 +184,7 @@ const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-white/90 via-primary-50/50 to-secondary-50/30 rounded-2xl p-8 border border-primary-200/60 transition-all duration-300 transform-gpu relative overflow-hidden group backdrop-blur-sm hover:shadow-xl card-hover"
+            className="bg-gradient-to-br from-white/90 via-primary-50/50 to-secondary-50/30 rounded-2xl p-8 border border-wood-200 transition-all duration-300 transform-gpu relative overflow-hidden group backdrop-blur-sm hover:shadow-xl"
             whileHover={{ 
               y: -8, 
               scale: 1.02

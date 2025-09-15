@@ -104,7 +104,7 @@ const Projects = () => {
 
               {/* Project Info Card */}
               <motion.div 
-                className="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/20 rounded-2xl p-6 shadow-lg border border-primary-100/60 max-w-xl mx-auto hover:border-primary-300/80 transition-all duration-300 transform-gpu relative overflow-hidden group backdrop-blur-sm hover:shadow-xl"
+                className="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/20 rounded-2xl p-6 shadow-lg border border-primary-100 max-w-xl mx-auto hover:border-primary-300 transition-all duration-300 transform-gpu relative overflow-hidden group backdrop-blur-sm hover:shadow-xl"
                 whileHover={{ 
                   y: -12, 
                   scale: 1.05

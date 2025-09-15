@@ -17,7 +17,7 @@ const HowItStarted = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-wood-900 mb-4">
             {t('howItStarted.title')}
           </h2>
           <p className="text-xl text-primary-600 max-w-4xl mx-auto leading-relaxed">
@@ -104,7 +104,7 @@ const HowItStarted = () => {
                       duration: 0.3,
                       delay: index * 0.1
                     }}
-                    className="px-4 py-2 bg-gradient-to-r from-accent-50/80 via-primary-50/60 to-secondary-50/40 text-primary-700 text-sm font-medium rounded-full border border-accent-200/60 hover:border-accent-400/80 transition-all duration-300 cursor-pointer transform-gpu backdrop-blur-sm relative overflow-hidden group hover:shadow-lg"
+                    className="px-4 py-2 bg-gradient-to-r from-accent-50/80 via-primary-50/60 to-secondary-50/40 text-primary-700 text-sm font-medium rounded-full border border-wood-200 hover:border-wood-400 transition-all duration-300 cursor-pointer transform-gpu backdrop-blur-sm relative overflow-hidden group hover:shadow-lg"
                   >
                     <span className="relative z-10">{tech}</span>
                   </motion.span>

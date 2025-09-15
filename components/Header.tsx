@@ -122,11 +122,7 @@ const Header = () => {
                 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.href)}
-                className={`relative px-4 py-2 rounded-xl font-semibold transition-all duration-300 group ${
-                  activeSection === item.id
-                    ? 'text-primary-600 bg-primary-100/80 shadow-md'
-                    : 'text-primary-600 hover:text-primary-800 hover:bg-white/60'
-                }`}
+                className="text-wood-900 hover:text-wood-700 font-semibold transition-all duration-300 relative group px-3 py-2 rounded-lg hover:bg-white/50 backdrop-blur-sm"
               >
                 {item.name}
                 {/* Enhanced underline effect */}

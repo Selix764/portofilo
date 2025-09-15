@@ -73,7 +73,7 @@ const Skills = () => {
                 delay: index * 0.1
               }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-white/90 via-primary-50/30 to-secondary-50/20 rounded-2xl p-6 border border-primary-100/50 hover:border-primary-300/80 transition-all duration-300 transform-gpu relative overflow-hidden group hover:shadow-xl card-hover"
+              className="bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/20 rounded-2xl p-6 border border-primary-100 hover:border-primary-300 transition-all duration-300 transform-gpu relative overflow-hidden group hover:shadow-xl"
             >
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-4">
