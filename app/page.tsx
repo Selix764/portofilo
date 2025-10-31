@@ -111,6 +111,9 @@ export default function Home() {
       
       {/* Contact Section */}
       <Contact />
+
+      {/* Section Divider */}
+      <div className="section-divider-thick-gradient2" />
       
       {/* Footer */}
       <Footer />
