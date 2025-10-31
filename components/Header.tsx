@@ -88,7 +88,7 @@ const Header = () => {
     <motion.header
       initial={{ y: -100, scale: 0.60}}
       animate={{ y: 0 , scale: 1.0}}
-      transition={{delay: 0.50 , duration: 0.5}}
+      transition={{delay: 0.50 , duration: 0.25}}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
           ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-primary-200/50'

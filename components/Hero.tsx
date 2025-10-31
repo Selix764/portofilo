@@ -107,7 +107,7 @@ const Hero = () => {
             y: [0, 15, 0]
           }}
           transition={{ 
-            duration: 5, 
+            duration: 4.8, 
             repeat: Infinity, 
             ease: "easeInOut",
             delay: 1
