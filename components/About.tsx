@@ -8,10 +8,10 @@ const About = () => {
   const { t } = useLanguage()
   
   const stats = [
-    { label: t('about.stats.age'), value: '16', icon: User },
-    { label: t('about.stats.projects'), value: '10+', icon: Code },
-    { label: t('about.stats.technologies'), value: '8+', icon: Award },
-    { label: t('about.stats.satisfaction'), value: '100%', icon: Heart },
+    { label: t('about.stats.age'), value: new Date().getFullYear() - 2009 as number, icon: User },
+    { label: t('about.stats.projects'), value: '10+' as string, icon: Code },
+    { label: t('about.stats.technologies'), value: '8+' as string, icon: Award },
+    { label: t('about.stats.satisfaction'), value: '+90%' as string, icon: Heart },
   ]
 
   return (
@@ -50,10 +50,11 @@ const About = () => {
               }}
               transition={{ duration: 0.3 }}
             >
+
               <div className="w-80 h-80 mx-auto rounded-full gradient-border hover:shadow-2xl transition-all duration-300 relative">
                 <div className="w-full h-full rounded-full bg-white p-2">
                   <div className="w-full h-full rounded-full bg-gradient-to-br from-primary-100 via-secondary-100 to-accent-100 flex items-center justify-center">
-                    <img src="/portofolio_photo.jpeg" alt="Profile photo" className="w-full h-full object-cover rounded-full" />
+                    <img src="projects/portofolio_photo.jpg" className="w-full h-full object-cover rounded-full" />
                     
                     {/* Floating elements around the profile */}
                     <motion.div

@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { ArrowDown, Github, Mail, Instagram, Sparkles, Rocket, Star } from 'lucide-react'
+import { easeIn, easeInOut, motion } from 'framer-motion'
+import { ArrowDown, Github, Mail, Instagram, Sparkles, Rocket, Star, InfinityIcon } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const Hero = () => {
@@ -79,7 +79,7 @@ const Hero = () => {
             x: [0, 10, 0]
           }}
           transition={{ 
-            duration: 6, 
+            duration: 4, 
             repeat: Infinity, 
             ease: "easeInOut",
             delay: 1
@@ -146,21 +146,37 @@ const Hero = () => {
             </motion.h1>
             
             <motion.h2
+              initial={{
+                opacity: 0,
+                scale: 0.8,
+                y: 20
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1.0,
+                y: 0
+              }}
+              transition={{
+                duration: 0.8, 
+                delay: 0.25
+              }}
               className="text-4xl md:text-6xl font-bold text-wood-900 mb-6"
-              whileHover={{ 
-                scale: 1.01,
+              whileHover={{
+                scale: 1.25,
                 transition: { duration: 0.3 }
               }}
             >
-              {t('hero.subtitle')}
+              <div className="gradient-text">
+                {t('hero.subtitle')}
+              </div>
             </motion.h2>
           </motion.div>
 
           {/* Enhanced Subtitle with Better Visual Hierarchy */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 30, scale: 0.80 }}
+            animate={{ opacity: 1, y: 0, scale: 1.0}}
+            transition={{ duration: 0.8, delay: 0.75 }}
             className="mb-12"
           >
             <motion.div
@@ -169,7 +185,7 @@ const Hero = () => {
             >
               <motion.div
                 animate={{ rotate: [0, 360] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
               >
                 <Sparkles className="w-6 h-6 text-secondary-500" />
               </motion.div>
@@ -178,7 +194,7 @@ const Hero = () => {
               </p>
               <motion.div
                 animate={{ rotate: [0, -360] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 3.4, repeat: Infinity, ease: "linear" }}
               >
                 <Sparkles className="w-6 h-6 text-accent-500" />
               </motion.div>
@@ -187,9 +203,9 @@ const Hero = () => {
 
           {/* Enhanced CTA Buttons with Clearer Action Verbs */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0, y: 30, scale: 0.80}}
+            animate={{ opacity: 1, y: 0, scale: 1.0 }}
+            transition={{ duration: 0.8, delay: 1.25 }}
             className="mb-16 flex flex-col sm:flex-row justify-center items-center gap-6"
           >
             {/* Primary CTA - "Start Your Project" */}
@@ -247,9 +263,9 @@ const Hero = () => {
 
           {/* Enhanced Social Links with Better Hover Effects */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial={{ opacity: 0, y: 30, scale: 0.80}}
+            animate={{ opacity: 1, y: 0, scale: 1.0}}
+            transition={{ duration: 0.8, delay: 1.50 }}
             className="flex justify-center items-center gap-8"
           >
             <motion.a
@@ -265,8 +281,8 @@ const Hero = () => {
             >
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                initial={{ x: "-100%" }}
-                whileHover={{ x: "0%" }}
+                initial={{ x: "-100%"}}
+                whileHover={{ x: "0%"}}
                 transition={{ duration: 0.3 }}
               />
               <Github className="w-8 h-8 text-gray-700 relative z-10" />
@@ -315,9 +331,9 @@ const Hero = () => {
 
       {/* Enhanced Scroll Indicator */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1 }}
+        initial={{ opacity: 0 , scale: 0.80}}
+        animate={{ opacity: 1 , scale: 1.0}}
+        transition={{ duration: 0.8, delay: 2.0 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.button

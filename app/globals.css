@@ -140,7 +140,6 @@
   .slide-in-right {
     animation: slideInRight 0.8s ease-out forwards;
   }
-
   /* Loading animations */
   .loading-spinner {
     animation: spin 1s linear infinite;
