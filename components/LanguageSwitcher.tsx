@@ -35,8 +35,7 @@ const LanguageSwitcher = () => {
       <motion.button
         whileHover={{ 
           scale: 1.05, 
-          y: -2,
-          rotate: 2
+          y: -2
         }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setLanguage('ro')}
@@ -52,8 +51,7 @@ const LanguageSwitcher = () => {
       <motion.button
         whileHover={{ 
           scale: 1.05, 
-          y: -2,
-          rotate: -2
+          y: -2
         }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setLanguage('en')}

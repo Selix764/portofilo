@@ -15,7 +15,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="section-padding">
+    <section id="about" className="section-padding bg-gradient-to-br from-secondary-50 via-primary-50 to-accent-50">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -52,14 +52,13 @@ const About = () => {
             >
               <div className="w-80 h-80 mx-auto rounded-full gradient-border hover:shadow-2xl transition-all duration-300 relative">
                 <div className="w-full h-full rounded-full bg-white p-2">
-                  <div className="w-full h-full rounded-full bg-gradient-to-br from-primary-100 via-secondary-100 to-accent-100 flex items-center justify-center relative overflow-hidden">
-                    <User className="w-32 h-32 text-primary-600 relative z-10" />
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-primary-100 via-secondary-100 to-accent-100 flex items-center justify-center">
+                    <img src="/portofolio_photo.jpeg" alt="Profile photo" className="w-full h-full object-cover rounded-full" />
                     
                     {/* Floating elements around the profile */}
                     <motion.div
                       animate={{ 
-                        y: [0, -10, 0],
-                        rotate: [0, 5, 0]
+                        y: [0, -10, 0]
                       }}
                       transition={{ 
                         duration: 4, 
@@ -73,8 +72,7 @@ const About = () => {
                     
                     <motion.div
                       animate={{ 
-                        y: [0, 10, 0],
-                        rotate: [0, -5, 0]
+                        y: [0, 10, 0]
                       }}
                       transition={{ 
                         duration: 5, 

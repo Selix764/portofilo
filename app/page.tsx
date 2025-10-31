@@ -83,7 +83,7 @@ export default function Home() {
       </section>
       
       {/* Section Divider */}
-      <div className="section-divider" />
+      <div className="section-divider-thick-gradient2" />
       
       {/* Skills Section */}
       <section className="bg-white">
@@ -91,7 +91,7 @@ export default function Home() {
       </section>
       
       {/* Section Divider */}
-      <div className="section-divider" />
+      <div className="section-divider-thick-gradient1" />
       
       {/* How It Started Section */}
       <section className="section-alt">
@@ -99,7 +99,7 @@ export default function Home() {
       </section>
       
       {/* Section Divider */}
-      <div className="section-divider" />
+      <div className="section-divider-thick-gradient2" />
       
       {/* Projects Section */}
       <section className="section-alt-2">
@@ -107,7 +107,7 @@ export default function Home() {
       </section>
       
       {/* Section Divider */}
-      <div className="section-divider" />
+      <div className="section-divider-thick-gradient1" />
       
       {/* Contact Section */}
       <Contact />

@@ -48,8 +48,7 @@ const Hero = () => {
         {/* Large Circle */}
         <motion.div
           animate={{ 
-            y: [0, -20, 0],
-            rotate: [0, 5, 0]
+            y: [0, -20, 0]
           }}
           transition={{ 
             duration: 8, 
@@ -62,8 +61,7 @@ const Hero = () => {
         {/* Medium Circle */}
         <motion.div
           animate={{ 
-            y: [0, 30, 0],
-            rotate: [0, -5, 0]
+            y: [0, 30, 0]
           }}
           transition={{ 
             duration: 10, 
@@ -92,8 +90,7 @@ const Hero = () => {
         {/* Floating Stars */}
         <motion.div
           animate={{ 
-            y: [0, -10, 0],
-            rotate: [0, 180, 360]
+            y: [0, -10, 0]
           }}
           transition={{ 
             duration: 4, 
@@ -107,8 +104,7 @@ const Hero = () => {
 
         <motion.div
           animate={{ 
-            y: [0, 15, 0],
-            rotate: [0, -180, -360]
+            y: [0, 15, 0]
           }}
           transition={{ 
             duration: 5, 
@@ -217,7 +213,7 @@ const Hero = () => {
               
               <motion.div
                 className="relative z-10"
-                animate={{ rotate: [0, 10, -10, 0] }}
+                animate={{}}
                 transition={{ duration: 2, repeat: Infinity }}
               >
                 <Rocket className="w-6 h-6" />
@@ -259,8 +255,7 @@ const Hero = () => {
             <motion.a
               whileHover={{ 
                 scale: 1.15, 
-                y: -8,
-                rotate: [0, 5, -5, 0]
+                y: -8
               }}
               whileTap={{ scale: 0.95 }}
               href="https://github.com/Selix764"
@@ -280,8 +275,7 @@ const Hero = () => {
             <motion.a
               whileHover={{ 
                 scale: 1.15, 
-                y: -8,
-                rotate: [0, -5, 5, 0]
+                y: -8
               }}
               whileTap={{ scale: 0.95 }}
               href="https://www.instagram.com/building.dreams.dev"
@@ -301,8 +295,7 @@ const Hero = () => {
             <motion.a
               whileHover={{ 
                 scale: 1.15, 
-                y: -8,
-                rotate: [0, 5, -5, 0]
+                y: -8
               }}
               whileTap={{ scale: 0.95 }}
               href="mailto:iordachepaul764@gmail.com"

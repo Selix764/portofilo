@@ -41,7 +41,7 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skills" className="section-padding">
+    <section id="skills" className="section-padding bg-gradient-to-br from-secondary-50 via-primary-50 to-accent-50">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -80,7 +80,6 @@ const Skills = () => {
                   <motion.div 
                     className="text-primary-600"
                     whileHover={{ 
-                      rotate: 360, 
                       scale: 1.05,
                       boxShadow: "0 15px 30px -5px rgba(59, 130, 246, 0.3)"
                     }}

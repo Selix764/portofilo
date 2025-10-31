@@ -65,7 +65,7 @@ const Contact = () => {
                 <div className="relative z-10 flex items-center gap-6">
                   <motion.div 
                     className="p-4 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full"
-                    whileHover={{ rotate: 360, scale: 1.2 }}
+                    whileHover={{ scale: 1.2 }}
                     transition={{ duration: 0.6 }}
                   >
                     <Mail className="w-7 h-7 text-primary-600" />
@@ -90,7 +90,7 @@ const Contact = () => {
                 <div className="relative z-10 flex items-center gap-6">
                   <motion.div 
                     className="p-4 bg-gradient-to-br from-secondary-100 to-accent-100 rounded-full"
-                    whileHover={{ rotate: 360, scale: 1.2 }}
+                    whileHover={{ scale: 1.2 }}
                     transition={{ duration: 0.6 }}
                   >
                     <Phone className="w-7 h-7 text-secondary-600" />
@@ -115,7 +115,7 @@ const Contact = () => {
                 <div className="relative z-10 flex items-center gap-6">
                   <motion.div 
                     className="p-4 bg-gradient-to-br from-accent-100 to-primary-100 rounded-full"
-                    whileHover={{ rotate: 360, scale: 1.2 }}
+                    whileHover={{ scale: 1.2 }}
                     transition={{ duration: 0.6 }}
                   >
                     <MapPin className="w-7 h-7 text-accent-600" />
@@ -136,7 +136,6 @@ const Contact = () => {
                   whileHover={{ 
                     scale: 1.15, 
                     y: -5, 
-                    rotateZ: 15,
                     boxShadow: "0 15px 30px -5px rgba(59, 130, 246, 0.4)"
                   }}
                   whileTap={{ scale: 0.95 }}
@@ -158,7 +157,6 @@ const Contact = () => {
                   whileHover={{ 
                     scale: 1.15, 
                     y: -5, 
-                    rotateZ: 15,
                     boxShadow: "0 15px 30px -5px rgba(168, 85, 247, 0.4)"
                   }}
                   whileTap={{ scale: 0.95 }}
@@ -196,7 +194,7 @@ const Contact = () => {
             <div className="relative z-10 text-center space-y-8">
               <motion.div 
                 className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full mb-6"
-                whileHover={{ rotate: 360, scale: 1.1 }}
+                whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.6 }}
               >
                 <MessageCircle className="w-10 h-10 text-primary-600" />

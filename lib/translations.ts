@@ -121,8 +121,10 @@ export const translations = {
       tagline: 'Construind experiențe digitale care contează',
       quickLinks: 'Link-uri Rapide',
       connect: 'Conectează-te',
-      madeWith: 'Realizat cu',
-      using: 'folosind Next.js & Tailwind CSS'
+      madeWith: 'Realizat de',
+      using: 'folosind Next.js & Tailwind CSS',
+      followMe: 'Urmărește-mă pe diferite platforme de social media',
+      description: 'Portofoliu personal de dezvoltator web freelance'
     },
 
     // Common
@@ -254,8 +256,10 @@ export const translations = {
       tagline: 'Building digital experiences that matter',
       quickLinks: 'Quick Links',
       connect: 'Connect',
-      madeWith: 'Made with',
-      using: 'using Next.js & Tailwind CSS'
+      madeWith: 'Made by',
+      using: 'using Next.js & Tailwind CSS',
+      followMe: 'Follow Me On Different Social Media Platforms',
+      description: 'Personal portfolio of freelance web developer'
     },
 
     // Common

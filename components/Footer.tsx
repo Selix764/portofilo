@@ -129,7 +129,7 @@ const Footer = () => {
             className="border-t border-primary-800 mt-8 pt-8 text-center"
           >
             <p className="text-primary-200">
-              © {currentYear} Portfolio. {t('footer.madeWith')} <Heart className="inline w-4 h-4 text-red-500" /> {t('footer.by')} Paul Iordache
+              © {currentYear} Portfolio. {t('footer.madeWith')}  Paul Iordache
             </p>
           </motion.div>
         </div>

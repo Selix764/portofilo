@@ -63,7 +63,7 @@ const HowItStarted = () => {
               <div className="flex items-center gap-3 mb-6">
                 <motion.div 
                   className="w-12 h-12 bg-gradient-to-br from-accent-100 to-accent-200 rounded-full flex items-center justify-center"
-                  whileHover={{ rotate: 360, scale: 1.2 }}
+                  whileHover={{ scale: 1.2 }}
                   transition={{ duration: 0.6 }}
                 >
                   <Rocket className="w-6 h-6 text-accent-600" />
@@ -117,7 +117,6 @@ const HowItStarted = () => {
                   whileHover={{ 
                     scale: 1.08, 
                     y: -3, 
-                    rotateZ: 15,
                     boxShadow: "0 20px 40px -10px rgba(236, 72, 153, 0.4)"
                   }}
                   whileTap={{ scale: 0.95 }}

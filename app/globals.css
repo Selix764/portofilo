@@ -86,15 +86,34 @@
   /* Section dividers */
   .section-divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, #29ab87, transparent);
     margin: 2rem 0;
   }
 
   .section-divider-thick {
-    height: 3px;
-    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
-    margin: 3rem 0;
+    height: 5px;
+    background: linear-gradient(90deg,  transparent, #29ab87, transparent);
+    margin: 0.25rem 0;
   }
+
+  .section-divider-thick-alt {
+    height: 5px;
+    background: linear-gradient(90deg,  transparent, #7cfc00, transparent);
+    margin: 0.25rem 0;
+  }
+
+  .section-divider-thick-gradient1 {
+    height: 5px;
+    background: linear-gradient(90deg,  transparent, #7cfc00, transparent, #29ab87);
+    margin: 0.25rem 0;
+  }
+
+  .section-divider-thick-gradient2 {
+    height: 5px;
+    background: linear-gradient(90deg,  transparent, #29ab87, transparent, #7cfc00);
+    margin: 0.25rem 0;
+  } 
+
 
   /* Alternate section backgrounds */
   .section-alt {

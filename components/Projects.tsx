@@ -67,14 +67,14 @@ const Projects = () => {
 
         <div className="space-y-12">
           {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="max-w-5xl mx-auto"
-            >
+            <div key={project.id}>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="max-w-5xl mx-auto"
+              >
               {/* Project Screenshot - Large 16:9 Image */}
               <motion.a
                 href={project.liveUrl}
@@ -148,7 +148,6 @@ const Projects = () => {
                     <motion.a
                       whileHover={{ 
                         scale: 1.08, 
-                        rotateZ: 12,
                         boxShadow: "0 15px 30px -5px rgba(59, 130, 246, 0.4)"
                       }}
                       whileTap={{ scale: 0.95 }}
@@ -171,7 +170,6 @@ const Projects = () => {
                       <motion.a
                         whileHover={{ 
                           scale: 1.08, 
-                          rotateZ: 12,
                           boxShadow: "0 15px 30px -5px rgba(236, 72, 153, 0.4)"
                         }}
                         whileTap={{ scale: 0.95 }}
@@ -193,7 +191,10 @@ const Projects = () => {
                   </div>
                 </div>
               </motion.div>
-            </motion.div>
+              </motion.div>
+
+              
+            </div>
           ))}
         </div>
 
