@@ -136,7 +136,7 @@ const Hero = () => {
               <motion.span
                 className="bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-600 bg-clip-text text-transparent"
                 whileHover={{ 
-                  scale: 1.02,
+                  scale: 1.0,
                   filter: "brightness(1.1)",
                   transition: { duration: 0.3 }
                 }}
@@ -162,7 +162,8 @@ const Hero = () => {
               }}
               className="text-4xl md:text-6xl font-bold text-wood-900 mb-6"
               whileHover={{
-                scale: 1.25,
+                scale: 1.0,
+                filter: "brightness(1.1)",
                 transition: { duration: 0.3 }
               }}
             >
@@ -181,7 +182,7 @@ const Hero = () => {
           >
             <motion.div
               className="flex items-center justify-center gap-3 mb-6"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.00 }}
             >
               <motion.div
                 animate={{ rotate: [0, 360] }}
